@@ -182,6 +182,8 @@ then
     errexit 'publish must be run on master branch'
 fi
 
+git tag "v$version_string"
 git push --tags
 git push
+
 gh_publish
